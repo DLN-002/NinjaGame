@@ -17,13 +17,13 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (NINJA.image.equals(assets.image`ninjaR`)) {
-        shuriken = sprites.createProjectileFromSprite(assets.image`shuriken`, NINJA, 50, 0)
+        shuriken = sprites.createProjectileFromSprite(assets.image`shuriken`, NINJA, 100, 0)
     } else if (NINJA.image.equals(assets.image`ninjaU`)) {
-        shuriken = sprites.createProjectileFromSprite(assets.image`shuriken`, NINJA, 0, -50)
+        shuriken = sprites.createProjectileFromSprite(assets.image`shuriken`, NINJA, 0, -100)
     } else if (NINJA.image.equals(assets.image`ninjaL`)) {
-        shuriken = sprites.createProjectileFromSprite(assets.image`shuriken`, NINJA, -50, 0)
+        shuriken = sprites.createProjectileFromSprite(assets.image`shuriken`, NINJA, -100, 0)
     } else if (NINJA.image.equals(assets.image`ninjaD`)) {
-        shuriken = sprites.createProjectileFromSprite(assets.image`shuriken`, NINJA, 0, 50)
+        shuriken = sprites.createProjectileFromSprite(assets.image`shuriken`, NINJA, 0, 100)
     }
     shuriken.setKind(SpriteKind.shuriken)
 })
