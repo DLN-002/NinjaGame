@@ -3,44 +3,6 @@ namespace myImages {
 
     helpers._registerFactory("image", function(name: string) {
         switch(helpers.stringTrim(name)) {
-            case "image1":
-            case "ninjaD":return img`
-. . . . f f f f . . . . . 
-. . f f f f f f f f . . . 
-. f f f f f f c f f f . . 
-f f f f f f c c f f f c . 
-f f f c f f f f f f f c . 
-c c c f f f e e f f c c . 
-f f f f f e e f f c c f . 
-f f f b f e e f b f f f . 
-. f 4 1 f 4 4 f 1 4 f . . 
-. f e 4 4 4 4 4 4 e f . . 
-. f f f e e e e f f f . . 
-f e f f f f f f f f e f . 
-e 4 1 1 1 1 1 1 1 1 4 e . 
-e e f f f 1 f f f f e e . 
-. . . f f f f f f . . . . 
-. . . f f . . f f . . . . 
-`;
-            case "image4":
-            case "ninjaU":return img`
-. . . . f f f f . . . . . 
-. . f f c c c c f f . . . 
-. f f c c c c c c f f . . 
-f f c c c c c c c c f f . 
-f f c c f c c c c c c f . 
-f f f f f c c c f c c f . 
-f f f f c c c f c c f f . 
-f f f f f f f f f f f f . 
-f f f f f f f f f f f f . 
-. f f f f f f f f f f . . 
-. f f f f f f f f f f . . 
-f e f f f f f f f f e f . 
-e 4 1 1 1 1 1 1 1 1 4 e . 
-e e f f f f f f f f e e . 
-. . . f f f f f f . . . . 
-. . . f f . . f f . . . . 
-`;
             case "image3":
             case "ninjaL":return img`
 . . . . . f f f f f . . . 
@@ -97,6 +59,44 @@ f f e e f b f e e f f . .
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
+`;
+            case "image1":
+            case "ninjaD":return img`
+. . . . f f f f . . . . 
+. . f f f f f f f f . . 
+. f f f f f f c f f f . 
+f f f f f f c c f f f c 
+f f f c f f f f f f f c 
+c c c f f f e e f f c c 
+f f f f f e e f f c c f 
+f f f b f e e f b f f f 
+. f 4 1 f 4 4 f 1 4 f . 
+. f e 4 4 4 4 4 4 e f . 
+. f f f e e e e f f f . 
+f e f f f f f f f f e f 
+e 4 1 1 1 1 1 1 1 1 4 e 
+e e f f f 1 f f f f e e 
+. . . f f f f f f . . . 
+. . . f f . . f f . . . 
+`;
+            case "image4":
+            case "ninjaU":return img`
+. . . . f f f f . . . . 
+. . f f c c c c f f . . 
+. f f c c c c c c f f . 
+f f c c c c c c c c f f 
+f f c c f c c c c c c f 
+f f f f f c c c f c c f 
+f f f f c c c f c c f f 
+f f f f f f f f f f f f 
+f f f f f f f f f f f f 
+. f f f f f f f f f f . 
+. f f f f f f f f f f . 
+f e f f f f f f f f e f 
+e 4 1 1 1 1 1 1 1 1 4 e 
+e e f f f f f f f f e e 
+. . . f f f f f f . . . 
+. . . f f . . f f . . . 
 `;
         }
         return null;
