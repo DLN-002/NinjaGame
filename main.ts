@@ -34,7 +34,20 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         }
     }
     if (tiles.tileAtLocationEquals(NINJA.tilemapLocation(), assets.tile`myTile9`)) {
-        game.showLongText("Digging In The Field ", DialogLayout.Top)
+        NINJA.sayText("Do you want to water the soil?", 2000, true)
+        pause(2000)
+        NINJA.sayText("UP=Yes DOWN=No", 2000, true)
+        pause(2000)
+        pauseUntil(() => controller.A.isPressed() || controller.B.isPressed())
+        if (controller.up.isPressed()) {
+            tiles.setTileAt(NINJA.tilemapLocation(), assets.tile`myTile11`)
+            NINJA.sayText("a plant sprouted!", 2000, true)
+            pause(2000)
+        }
+        if (controller.down.isPressed()) {
+            NINJA.sayText("well ok then...", 2000, true)
+            pause(2000)
+        }
     }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -51,11 +64,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     NINJA.setImage(ninjaL)
-})
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
-    if (controller.B.isPressed()) {
-    	
-    }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
     music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
@@ -74,9 +82,6 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     NINJA.setImage(ninjaD)
 })
-/**
- * fix door
- */
 let shuriken: Sprite = null
 let NINJA: Sprite = null
 let ninjaU: Image = null
