@@ -26,13 +26,6 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             game.showLongText("The Path Is Blocked", DialogLayout.Top)
         }
     }
-    if (NINJA.tileKindAt(TileDirection.Bottom, assets.tile`myTile10`) || NINJA.tileKindAt(TileDirection.Right, assets.tile`myTile10`) || (NINJA.tileKindAt(TileDirection.Top, assets.tile`myTile10`) || NINJA.tileKindAt(TileDirection.Left, assets.tile`myTile10`))) {
-        if (NINJA.image.equals(ninjaU)) {
-            if (NINJA.tilemapLocation() == tiles.getTileLocation(15, 18)) {
-                game.showLongText("The Door Is Locked", DialogLayout.Top)
-            }
-        }
-    }
     if (tiles.tileAtLocationEquals(NINJA.tilemapLocation(), assets.tile`myTile9`)) {
         NINJA.sayText("Do you want to water the soil?", 2000, true)
         pause(2000)
