@@ -67,14 +67,14 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     }
     if (NINJA.overlapsWith(farmer)) {
         if (plants == 31) {
-            farmer.sayText("you be a good farmer, take this!", 2000, true)
-            pause(2000)
+            farmer.sayText("you be a good farmer, take this!", 4000, true)
+            pause(4000)
             music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
-            info.changeScoreBy(10)
+            info.changeScoreBy(20)
             sprites.destroy(farmer)
         } else {
-            farmer.sayText("learn to be a good farmer and me give some you something good!", 2000, true)
-            pause(2000)
+            farmer.sayText("learn to be a good farmer and me give some you something good!", 5000, true)
+            pause(5000)
         }
     }
     controller.moveSprite(NINJA)
@@ -112,6 +112,10 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     NINJA.setImage(ninjaD)
+})
+scene.onOverlapTile(SpriteKind.shuriken, assets.tile`myTile11`, function (sprite, location) {
+    plants += -1
+    tiles.setTileAt(location, assets.tile`myTile12`)
 })
 let shuriken: Sprite = null
 let plants = 0
