@@ -14,7 +14,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(NINJA, 0, 0)
     if (NINJA.tileKindAt(TileDirection.Bottom, assets.tile`FortYahoSine`) || NINJA.tileKindAt(TileDirection.Right, assets.tile`FortYahoSine`) || (NINJA.tileKindAt(TileDirection.Top, assets.tile`FortYahoSine`) || NINJA.tileKindAt(TileDirection.Left, assets.tile`FortYahoSine`))) {
         if (NINJA.image.equals(ninjaU)) {
-            game.showLongText("Fort Yaho", DialogLayout.Top)
+            game.showLongText("<- Fort Yaho", DialogLayout.Top)
         }
     }
     if (NINJA.tileKindAt(TileDirection.Bottom, assets.tile`Rocks`) || NINJA.tileKindAt(TileDirection.Right, assets.tile`Rocks`) || (NINJA.tileKindAt(TileDirection.Top, assets.tile`Rocks`) || NINJA.tileKindAt(TileDirection.Left, assets.tile`Rocks`))) {
