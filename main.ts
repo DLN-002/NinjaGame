@@ -134,25 +134,8 @@ ninjaU = assets.image`ninjaU`
 info.setLife(3)
 NINJA = sprites.create(assets.image`ninjaD`, SpriteKind.Player)
 controller.moveSprite(NINJA)
-tiles.setCurrentTilemap(tilemap`level1`)
+tiles.setCurrentTilemap(tilemap`Map`)
 scene.cameraFollowSprite(NINJA)
 tiles.placeOnTile(NINJA, tiles.getTileLocation(6, 8))
-farmer = sprites.create(img`
-    . . . . f f f f . . . . 
-    . . f f e e e e f f . . 
-    . f f e e e e e e f f . 
-    f f f f 4 e e e f f f f 
-    f f f 4 4 4 e e f f f f 
-    f f f 4 4 4 4 e e f f f 
-    f 4 e 4 4 4 4 4 4 e 4 f 
-    f 4 4 f f 4 4 f f 4 4 f 
-    f e 4 d d d d d d 4 e f 
-    . f e d d b b d d e f . 
-    . f f e 4 4 4 4 e f f . 
-    e 4 f 7 7 7 7 7 7 f 4 e 
-    4 d f 7 7 7 7 7 7 f d 4 
-    4 4 f 6 6 6 6 6 6 f 4 4 
-    . . . f f f f f f . . . 
-    . . . f f . . f f . . . 
-    `, SpriteKind.farmer)
+farmer = sprites.create(assets.image`farmer`, SpriteKind.farmer)
 tiles.placeOnTile(farmer, tiles.getTileLocation(29, 8))
