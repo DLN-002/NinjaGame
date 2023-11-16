@@ -2,33 +2,27 @@ namespace SpriteKind {
     export const shuriken = SpriteKind.create()
     export const farmer = SpriteKind.create()
 }
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, location) {
-    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
-    info.changeScoreBy(1)
-    tiles.setTileAt(location, assets.tile`myTile1`)
-})
-scene.onOverlapTile(SpriteKind.shuriken, assets.tile`myTile3`, function (sprite, location) {
-    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
-    info.changeScoreBy(1)
-    tiles.setTileAt(location, assets.tile`myTile2`)
-    sprites.destroy(sprite)
-})
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     NINJA.setImage(ninjaU)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`GoldenShurikenGrass`, function (sprite, location) {
+    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
+    info.changeScoreBy(1)
+    tiles.setTileAt(location, assets.tile`Grass`)
+})
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(NINJA, 0, 0)
-    if (NINJA.tileKindAt(TileDirection.Bottom, assets.tile`myTile8`) || NINJA.tileKindAt(TileDirection.Right, assets.tile`myTile8`) || (NINJA.tileKindAt(TileDirection.Top, assets.tile`myTile8`) || NINJA.tileKindAt(TileDirection.Left, assets.tile`myTile8`))) {
+    if (NINJA.tileKindAt(TileDirection.Bottom, assets.tile`FortYahoSine`) || NINJA.tileKindAt(TileDirection.Right, assets.tile`FortYahoSine`) || (NINJA.tileKindAt(TileDirection.Top, assets.tile`FortYahoSine`) || NINJA.tileKindAt(TileDirection.Left, assets.tile`FortYahoSine`))) {
         if (NINJA.image.equals(ninjaU)) {
             game.showLongText("Fort Yaho", DialogLayout.Top)
         }
     }
-    if (NINJA.tileKindAt(TileDirection.Bottom, assets.tile`myTile5`) || NINJA.tileKindAt(TileDirection.Right, assets.tile`myTile5`) || (NINJA.tileKindAt(TileDirection.Top, assets.tile`myTile5`) || NINJA.tileKindAt(TileDirection.Left, assets.tile`myTile5`))) {
+    if (NINJA.tileKindAt(TileDirection.Bottom, assets.tile`Rocks`) || NINJA.tileKindAt(TileDirection.Right, assets.tile`Rocks`) || (NINJA.tileKindAt(TileDirection.Top, assets.tile`Rocks`) || NINJA.tileKindAt(TileDirection.Left, assets.tile`Rocks`))) {
         if (NINJA.image.equals(ninjaL)) {
             game.showLongText("The Path Is Blocked", DialogLayout.Top)
         }
     }
-    if (tiles.tileAtLocationEquals(NINJA.tilemapLocation(), assets.tile`myTile12`)) {
+    if (tiles.tileAtLocationEquals(NINJA.tilemapLocation(), assets.tile`Sprout`)) {
         interacting = true
         NINJA.sayText("Do you want to water the Sprout?", 2000, true)
         pause(2000)
@@ -36,7 +30,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         pause(2000)
         pauseUntil(() => controller.A.isPressed() || controller.B.isPressed())
         if (controller.A.isPressed()) {
-            tiles.setTileAt(NINJA.tilemapLocation(), assets.tile`myTile11`)
+            tiles.setTileAt(NINJA.tilemapLocation(), assets.tile`Plant`)
             plants += 1
             NINJA.sayText("the plant got larger!", 2000, true)
             pause(2000)
@@ -47,7 +41,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         }
         interacting = false
     }
-    if (tiles.tileAtLocationEquals(NINJA.tilemapLocation(), assets.tile`myTile9`)) {
+    if (tiles.tileAtLocationEquals(NINJA.tilemapLocation(), assets.tile`Dirt`)) {
         interacting = true
         NINJA.sayText("Do you want to water the soil?", 2000, true)
         pause(2000)
@@ -55,7 +49,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         pause(2000)
         pauseUntil(() => controller.A.isPressed() || controller.B.isPressed())
         if (controller.A.isPressed()) {
-            tiles.setTileAt(NINJA.tilemapLocation(), assets.tile`myTile12`)
+            tiles.setTileAt(NINJA.tilemapLocation(), assets.tile`Sprout`)
             NINJA.sayText("a plant sprouted!", 2000, true)
             pause(2000)
         }
@@ -96,26 +90,32 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     NINJA.setImage(ninjaL)
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
-    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
-    info.changeScoreBy(1)
-    tiles.setTileAt(location, assets.tile`myTile2`)
-})
-scene.onOverlapTile(SpriteKind.shuriken, assets.tile`myTile0`, function (sprite, location) {
-    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
-    info.changeScoreBy(1)
-    tiles.setTileAt(location, sprites.castle.tilePath5)
-    sprites.destroy(sprite)
-})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     NINJA.setImage(ninjaR)
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     NINJA.setImage(ninjaD)
 })
-scene.onOverlapTile(SpriteKind.shuriken, assets.tile`myTile11`, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.shuriken, assets.tile`Plant`, function (sprite, location) {
     plants += -1
-    tiles.setTileAt(location, assets.tile`myTile12`)
+    tiles.setTileAt(location, assets.tile`Sprout`)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`GoldenShurikenSand`, function (sprite, location) {
+    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
+    info.changeScoreBy(1)
+    tiles.setTileAt(location, assets.tile`Sand`)
+})
+scene.onOverlapTile(SpriteKind.shuriken, assets.tile`GoldenShurikenGrass`, function (sprite, location) {
+    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
+    info.changeScoreBy(1)
+    tiles.setTileAt(location, assets.tile`Grass`)
+    sprites.destroy(sprite)
+})
+scene.onOverlapTile(SpriteKind.shuriken, assets.tile`GoldenShurikenSand`, function (sprite, location) {
+    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
+    info.changeScoreBy(1)
+    tiles.setTileAt(location, sprites.castle.tilePath5)
+    sprites.destroy(sprite)
 })
 let shuriken: Sprite = null
 let plants = 0
