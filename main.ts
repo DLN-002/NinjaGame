@@ -67,7 +67,7 @@ laser_speedF = 100
 laser_speedB = -100
 interacting = false
 HeroR = assets.image`ninjaR`
-HeroL = assets.image`ninjaL`
+HeroL = assets.image`HeroL`
 HeroD = assets.image`HeroD`
 HeroU = assets.image`ninjaU`
 Hero = sprites.create(assets.image`HeroD`, SpriteKind.Player)
@@ -80,3 +80,22 @@ controller.moveSprite(Hero)
 tiles.setCurrentTilemap(tilemap`Map`)
 scene.cameraFollowSprite(Hero)
 tiles.placeOnTile(Hero, tiles.getTileLocation(6, 8))
+let STORMTROOPER = sprites.create(img`
+    . . . . . f f f f f f . . . . . 
+    . . . f f 1 1 1 1 1 1 f f . . . 
+    . . f b 1 1 1 1 1 1 1 1 b f . . 
+    . . f b 1 1 1 1 1 1 1 1 b f . . 
+    . . f b 1 1 1 1 1 1 1 1 b f . . 
+    . . f f f f f f f f f f f f . . 
+    . . f 1 f f f 1 1 f f f 1 f . . 
+    . f 1 b f f 1 b b 1 f f b 1 f . 
+    . f b 1 1 1 b 1 1 b 1 1 1 b f . 
+    . . f f 1 f 1 f f 1 f 1 f f . . 
+    . f 1 1 f 1 1 f f 1 1 f 1 1 f . 
+    . f 1 b f f f 1 1 f f f b 1 f . 
+    . . f f f f 1 b b 1 f f f f . . 
+    . . . f 1 b f f f f b 1 f . . . 
+    . . . f 1 1 1 f f 1 1 1 f . . . 
+    . . . . f f f . . f f f . . . . 
+    `, SpriteKind.Enemy)
+tiles.placeOnTile(STORMTROOPER, tiles.getTileLocation(11, 8))
