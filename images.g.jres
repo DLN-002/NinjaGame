@@ -14,11 +14,6 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "shuriken"
     },
-    "image1": {
-        "data": "hwQMABAAAAAA8M//AODuAAD/z///7+QA8P/P/+T/8QDw//y/Qf/x//////9P/vH/////7kT+EQ//z+/uRP7xD//M7/9P/vH/8P//v0H/8f/w///85P/xAAD/z/z/7+QAAMDM/wDg7gA=",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "ninjaD"
-    },
     "image4": {
         "data": "hwQMABAAAAAA8P//D+DuAAD/////7+QA8M/8////8QDwzPz////x/8/M//z///H/z8zM/P//8Q/PzMz8///xD8/MzP////H/8Mz8/P//8f/wz8z8///xAAD/zP//7+QAAPD//w/g7gA=",
         "mimeType": "image/x-mkcd-f4",
@@ -28,6 +23,11 @@
         "data": "hwQMABAAAAAA8P//D+BEAAD//0T+T00A8P//TuT//wDw/kT03X5n/+9ORPTddGf/7+5ERL10Zw/v7k5EvXRnD+/u7vTddGf/8P7v9N1+Z//w//9O5P//AAD//0T+T00AAPD//w/gRAA=",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "farmer"
+    },
+    "image1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAP//+/sA/wAADwD///9EDwAA//hI9IT/D/CI+Ej0/0/08Ej4iESPj/SPiPiPiE+P9I+I9P//+PgPj4j4///4+A+PRPiPiE+P9PBE+IhEj4/08Ij4SPT/T/QA//hI9IT/DwAA////RA8AAAAAAAD/AAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "HeroD"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",

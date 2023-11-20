@@ -1,9 +1,10 @@
 {
-    "name": "NINJA",
+    "name": "STAR WARS",
     "description": "",
     "dependencies": {
         "device": "*",
-        "darts": "*"
+        "darts": "*",
+        "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.2"
     },
     "files": [
         "main.blocks",
