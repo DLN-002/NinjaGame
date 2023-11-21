@@ -22,25 +22,6 @@ namespace myImages {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `;
-            case "%0l#j+b~(W$kyaIojUcx":
-            case "farmer":return img`
-. . . . f f f f . . . . 
-. . f f e e e e f f . . 
-. f f e e e e e e f f . 
-f f f f 4 e e e f f f f 
-f f f 4 4 4 e e f f f f 
-f f f 4 4 4 4 e e f f f 
-f 4 e 4 4 4 4 4 4 e 4 f 
-f 4 4 f f 4 4 f f 4 4 f 
-f e 4 d d d d d d 4 e f 
-. f e d d b b d d e f . 
-. f f e 4 4 4 4 e f f . 
-e 4 f 7 7 7 7 7 7 f 4 e 
-4 d f 7 7 7 7 7 7 f d 4 
-4 4 f 6 6 6 6 6 6 f 4 4 
-. . . f f f f f f . . . 
-. . . f f . . f f . . . 
-`;
             case "image3":
             case "HeroL":return img`
 . . . f f f f . . . 
@@ -116,6 +97,25 @@ f 4 4 4 4 4 4 8 f f
 . . . f 4 8 8 f f 8 8 4 f . . . 
 . . . f 4 4 4 f f 4 4 4 f . . . 
 . . . . f f f . . f f f . . . . 
+`;
+            case "%0l#j+b~(W$kyaIojUcx":
+            case "farmer":return img`
+. . . . . f f f f f . . . 
+. . . f f f f f f f f f . 
+. . f f f c f f f f f f . 
+. . f f c f f f c f f f f 
+f f c c f f f c c f f c f 
+f f f f f e f f f f c c f 
+. f f f e e f f f f f f f 
+. . f f e e f b f e e f f 
+. . . f 4 4 f 1 e 4 e f . 
+. . . f 4 4 4 4 e f f f . 
+. . . f f e e e e e f . . 
+. . . f 7 7 7 e 4 4 e . . 
+. . . f 7 7 7 e 4 4 e . . 
+. . . f 6 6 6 f e e f . . 
+. . . . f f f f f f . . . 
+. . . . . . f f f . . . . 
 `;
         }
         return null;

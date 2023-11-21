@@ -1,6 +1,7 @@
 namespace SpriteKind {
     export const shuriken = SpriteKind.create()
     export const farmer = SpriteKind.create()
+    export const imployer = SpriteKind.create()
 }
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     Hero.setImage(HeroU)
@@ -14,6 +15,12 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     interacting = false
     controller.moveSprite(Hero)
 })
+function see_sidd () {
+    tiles.setCurrentTilemap(tilemap`level3`)
+    tiles.placeOnTile(Hero, tiles.getTileLocation(4, 7))
+    Sidd = sprites.create(assets.image`farmer`, SpriteKind.imployer)
+    tiles.placeOnTile(Sidd, tiles.getTileLocation(6, 7))
+}
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (interacting == false) {
         if (Hero.image.equals(HeroR)) {
@@ -38,6 +45,7 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     Hero.setImage(HeroD)
 })
 let laser: Sprite = null
+let Sidd: Sprite = null
 let Hero: Sprite = null
 let HeroU: Image = null
 let HeroD: Image = null
@@ -76,10 +84,20 @@ HeroHealth.attachToSprite(Hero, 2, 0)
 HeroHealth.max = 10
 HeroHealth.value = 10
 HeroHealth.setColor(8, 15)
-controller.moveSprite(Hero)
-tiles.setCurrentTilemap(tilemap`Map`)
+see_sidd()
 scene.cameraFollowSprite(Hero)
-tiles.placeOnTile(Hero, tiles.getTileLocation(6, 8))
+Sidd.sayText("Hey kid!", 750, true)
+pause(750)
+Sidd.sayText("I got a mission for you!", 1000, true)
+pause(1000)
+Sidd.sayText("Go collect some valuable cargo for credits!", 2000, true)
+pause(2000)
+Sidd.sayText("Now go!", 750, true)
+pause(1000)
+sprites.destroy(Sidd)
+tiles.setCurrentTilemap(tilemap`level6`)
+tiles.placeOnTile(Hero, tiles.getTileLocation(1, 1))
+controller.moveSprite(Hero)
 let STORMTROOPER = sprites.create(img`
     . . . . . f f f f f f . . . . . 
     . . . f f 1 1 1 1 1 1 f f . . . 
@@ -98,4 +116,61 @@ let STORMTROOPER = sprites.create(img`
     . . . f 1 1 1 f f 1 1 1 f . . . 
     . . . . f f f . . f f f . . . . 
     `, SpriteKind.Enemy)
-tiles.placeOnTile(STORMTROOPER, tiles.getTileLocation(11, 8))
+tiles.placeOnTile(STORMTROOPER, tiles.getTileLocation(3, 9))
+STORMTROOPER = sprites.create(img`
+    . . . . . f f f f f f . . . . . 
+    . . . f f 1 1 1 1 1 1 f f . . . 
+    . . f b 1 1 1 1 1 1 1 1 b f . . 
+    . . f b 1 1 1 1 1 1 1 1 b f . . 
+    . . f b 1 1 1 1 1 1 1 1 b f . . 
+    . . f f f f f f f f f f f f . . 
+    . . f 1 f f f 1 1 f f f 1 f . . 
+    . f 1 b f f 1 b b 1 f f b 1 f . 
+    . f b 1 1 1 b 1 1 b 1 1 1 b f . 
+    . . f f 1 f 1 f f 1 f 1 f f . . 
+    . f 1 1 f 1 1 f f 1 1 f 1 1 f . 
+    . f 1 b f f f 1 1 f f f b 1 f . 
+    . . f f f f 1 b b 1 f f f f . . 
+    . . . f 1 b f f f f b 1 f . . . 
+    . . . f 1 1 1 f f 1 1 1 f . . . 
+    . . . . f f f . . f f f . . . . 
+    `, SpriteKind.Enemy)
+tiles.placeOnTile(STORMTROOPER, tiles.getTileLocation(4, 9))
+STORMTROOPER = sprites.create(img`
+    . . . . . f f f f f f . . . . . 
+    . . . f f 1 1 1 1 1 1 f f . . . 
+    . . f b 1 1 1 1 1 1 1 1 b f . . 
+    . . f b 1 1 1 1 1 1 1 1 b f . . 
+    . . f b 1 1 1 1 1 1 1 1 b f . . 
+    . . f f f f f f f f f f f f . . 
+    . . f 1 f f f 1 1 f f f 1 f . . 
+    . f 1 b f f 1 b b 1 f f b 1 f . 
+    . f b 1 1 1 b 1 1 b 1 1 1 b f . 
+    . . f f 1 f 1 f f 1 f 1 f f . . 
+    . f 1 1 f 1 1 f f 1 1 f 1 1 f . 
+    . f 1 b f f f 1 1 f f f b 1 f . 
+    . . f f f f 1 b b 1 f f f f . . 
+    . . . f 1 b f f f f b 1 f . . . 
+    . . . f 1 1 1 f f 1 1 1 f . . . 
+    . . . . f f f . . f f f . . . . 
+    `, SpriteKind.Enemy)
+tiles.placeOnTile(STORMTROOPER, tiles.getTileLocation(2, 10))
+STORMTROOPER = sprites.create(img`
+    . . . . . f f f f f f . . . . . 
+    . . . f f 1 1 1 1 1 1 f f . . . 
+    . . f b 1 1 1 1 1 1 1 1 b f . . 
+    . . f b 1 1 1 1 1 1 1 1 b f . . 
+    . . f b 1 1 1 1 1 1 1 1 b f . . 
+    . . f f f f f f f f f f f f . . 
+    . . f 1 f f f 1 1 f f f 1 f . . 
+    . f 1 b f f 1 b b 1 f f b 1 f . 
+    . f b 1 1 1 b 1 1 b 1 1 1 b f . 
+    . . f f 1 f 1 f f 1 f 1 f f . . 
+    . f 1 1 f 1 1 f f 1 1 f 1 1 f . 
+    . f 1 b f f f 1 1 f f f b 1 f . 
+    . . f f f f 1 b b 1 f f f f . . 
+    . . . f 1 b f f f f b 1 f . . . 
+    . . . f 1 1 1 f f 1 1 1 f . . . 
+    . . . . f f f . . f f f . . . . 
+    `, SpriteKind.Enemy)
+tiles.placeOnTile(STORMTROOPER, tiles.getTileLocation(2, 11))
