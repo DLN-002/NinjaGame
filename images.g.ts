@@ -99,7 +99,7 @@ f 4 4 4 4 4 4 8 f f
 . . . . f f f . . f f f . . . . 
 `;
             case "%0l#j+b~(W$kyaIojUcx":
-            case "farmer":return img`
+            case "Sidd":return img`
 . . . . . f f f f f . . . 
 . . . f f f f f f f f f . 
 . . f f f c f f f f f f . 
@@ -116,6 +116,25 @@ f f f f f e f f f f c c f
 . . . f 6 6 6 f e e f . . 
 . . . . f f f f f f . . . 
 . . . . . . f f f . . . . 
+`;
+            case "1HW%~7YgYtaY9j=]MwHL":
+            case "Stormtrooper":return img`
+. . . . . f f f f f f . . . . . 
+. . . f f 1 1 1 1 1 1 f f . . . 
+. . f b 1 1 1 1 1 1 1 1 b f . . 
+. . f b 1 1 1 1 1 1 1 1 b f . . 
+. . f b 1 1 1 1 1 1 1 1 b f . . 
+. . f f f f f f f f f f f f . . 
+. . f 1 f f f 1 1 f f f 1 f . . 
+. f 1 b f f 1 b b 1 f f b 1 f . 
+. f b 1 1 1 b 1 1 b 1 1 1 b f . 
+. . f f 1 f 1 f f 1 f 1 f f . . 
+. f 1 1 f 1 1 f f 1 1 f 1 1 f . 
+. f 1 b f f f 1 1 f f f b 1 f . 
+. . f f f f 1 b b 1 f f f f . . 
+. . . f 1 b f f f f b 1 f . . . 
+. . . f 1 1 1 f f 1 1 1 f . . . 
+. . . . f f f . . f f f . . . . 
 `;
         }
         return null;
